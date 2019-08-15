@@ -1,0 +1,18 @@
+version: '2'
+services:
+  springboot:
+    image: sreddy9676/spring:1.0
+    container_name: springboot
+    ports:
+     - "8080:8080"
+    networks:
+      - javahome-app
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    networks:
+      - javahome-app
+networks:
+  javahome-app:
+    driver: bridge
+
