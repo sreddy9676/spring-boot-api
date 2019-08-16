@@ -11,10 +11,12 @@ services:
     container_name: mongodb
     image: mongo:latest
     volumes:
-          - ./data/db:/data/db
+          - myvolume:/data/db
     networks:
       - javahome-app
 networks:
   javahome-app:
     driver: bridge
+volumes:
+  myvolume:
 
