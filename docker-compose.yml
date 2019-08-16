@@ -10,6 +10,8 @@ services:
   mongodb:
     container_name: mongodb
     image: mongo:latest
+    volumes:
+          - ./data/db:/data/db
     networks:
       - javahome-app
 networks:
