@@ -11,7 +11,7 @@ services:
     container_name: mongodb
     image: mongo:latest
     volumes:
-          - myvolume:/data/db
+      - myvolume:/data/db
     networks:
       - javahome-app
 networks:
