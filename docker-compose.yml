@@ -1,4 +1,4 @@
-version: '2'
+version: '2.2'
 services:
   springboot:
     image: sreddy9676/spring:1.0
@@ -10,13 +10,13 @@ services:
   mongodb:
     container_name: mongodb
     image: mongo:latest
-    volumes:
-      - myvolume:/data/db
     networks:
       - javahome-app
+    volumes:
+      - muni:/data/db
 networks:
   javahome-app:
-    driver: bridge
+    driver: bridge 
 volumes:
-  myvolume:
-
+   muni:
+     external: true
