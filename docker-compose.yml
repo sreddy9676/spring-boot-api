@@ -1,7 +1,7 @@
 version: '2.2'
 services:
   springboot:
-    image: ${dockerRepo}
+    image: 172.31.46.186:8084/spring:10
     container_name: springboot
     ports:
      - "8080:8080"
