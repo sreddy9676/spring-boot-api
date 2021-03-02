@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 
-WORKDIR /app/api
+WORKDIR /app/api/ee
 
 COPY ./target/*.jar boot-api.jar
 
